@@ -12,6 +12,10 @@ public class Feeder {
      */
     public void simulateOneDay(int numBirds)
     {
+        if(Main.bear = true)
+        {
+            currentFood = 0;
+        } 
     }
 
     /**

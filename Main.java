@@ -9,7 +9,18 @@ public class Main
         System.out.println(g);
         System.out.println(g.getCurrentFood());
         g.simulateOneDay(12);
-        int random = (int) (Math.random() * 10);
+        int random = (int) ((Math.random() / 2) * 100);
+        if (random < 5)
+        {
+            boolean bear = true;
+            System.out.println(bear);
+        }
+        else if (random < 10)
+        {
+            random = 0;
+        }
         System.out.println(random);
+        g.simulateOneDay(12);
+        System.out.println(g.getCurrentFood());
     }
 }
