@@ -12,10 +12,22 @@ public class Feeder {
      */
     public void simulateOneDay(int numBirds)
     {
-        if(Main.bear = true)
+        boolean bear = false;
+        if (Math.random() < 0.05) 
         {
+            bear = true;
+            System.out.println(bear);
             currentFood = 0;
-        } 
+        }
+        else
+        {
+            System.out.println(bear);
+            int eaten = (int)(Math.random() * 41) + 10;
+            System.out.println(eaten);
+            currentFood -= eaten * numBirds;
+            if(currentFood < 0) currentFood = 0;
+        }
+
     }
 
     /**
@@ -39,4 +51,10 @@ public class Feeder {
     }
 
     public Feeder() {}
+
+    public String toString()
+    {
+        return "Current Food: " + currentFood;
+    }
+
 }
